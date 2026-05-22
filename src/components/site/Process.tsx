@@ -14,7 +14,9 @@ export function Process() {
     <section id="process" className="py-24 lg:py-32">
       <div className="container-x">
         <div className="max-w-2xl">
-          <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">How We Work</div>
+          <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+            How We Work
+          </div>
           <h2 className="mt-3 text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             A clear, premium process — from first call to final walkthrough
           </h2>

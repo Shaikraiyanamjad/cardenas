@@ -24,12 +24,26 @@ export function About() {
           className="relative"
         >
           <div className="grid grid-cols-2 gap-4">
-            <img src={kitchen} alt="Kitchen remodel" className="rounded-2xl shadow-card object-cover h-72 w-full" loading="lazy" />
-            <img src={drywall} alt="Drywall installation" className="rounded-2xl shadow-card object-cover h-72 w-full mt-12" loading="lazy" />
+            <img
+              src={kitchen}
+              alt="Kitchen remodel"
+              className="rounded-2xl shadow-card object-cover h-72 w-full"
+              loading="lazy"
+            />
+            <img
+              src={drywall}
+              alt="Drywall installation"
+              className="rounded-2xl shadow-card object-cover h-72 w-full mt-12"
+              loading="lazy"
+            />
           </div>
           <div className="absolute -left-4 -bottom-4 rounded-2xl border border-border bg-white px-5 py-4 shadow-elegant">
-            <div className="text-4xl font-bold gradient-brand bg-clip-text text-transparent">15+</div>
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Years of experience</div>
+            <div className="text-4xl font-bold gradient-brand bg-clip-text text-transparent">
+              15+
+            </div>
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">
+              Years of experience
+            </div>
           </div>
         </motion.div>
 
@@ -39,14 +53,16 @@ export function About() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">About Cardenas</div>
+          <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+            About Cardenas
+          </div>
           <h2 className="mt-3 text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             Trusted home improvement contractor in New Jersey
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            Cardenas Construction LLC is a family-built company delivering premium residential
-            and commercial construction. From new builds to detailed remodels, we combine
-            precision craftsmanship with dependable project management to bring your vision to life.
+            Cardenas Construction LLC is a family-built company delivering premium residential and
+            commercial construction. From new builds to detailed remodels, we combine precision
+            craftsmanship with dependable project management to bring your vision to life.
           </p>
           <ul className="mt-8 grid sm:grid-cols-2 gap-3">
             {points.map((p, i) => (

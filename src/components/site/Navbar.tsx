@@ -29,7 +29,7 @@ export function Navbar() {
         <div className="container-x">
           <div
             className={`flex items-center justify-between rounded-2xl border border-border/70 px-4 lg:px-6 transition-all ${
-              scrolled ? "glass shadow-card py-2" : "bg-white/60 py-3"
+              scrolled ? "bg-white shadow-card py-2" : "bg-white py-3"
             }`}
           >
             <a href="#home" className="flex items-center gap-2">

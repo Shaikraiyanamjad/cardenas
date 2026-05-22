@@ -24,16 +24,18 @@ const items = [
 export function Projects() {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <section id="projects" className="section-brand py-24 lg:py-32">
+    <section id="projects" className="py-24 lg:py-32 gradient-brand">
       <div className="container-x">
         <div className="flex items-end justify-between flex-wrap gap-6">
           <div className="max-w-xl">
-            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[#ff6b6b]">Our Work</div>
-            <h2 className="mt-3 text-4xl lg:text-5xl font-bold tracking-tight text-balance text-white">
+            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-white">
+              Our Work
+            </div>
+            <h2 className="mt-3 text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Real projects, real craftsmanship
             </h2>
           </div>
-          <p className="text-white/85 max-w-sm">
+          <p className="text-white max-w-sm">
             A look inside recent builds and remodels — every detail handled by the Cardenas team.
           </p>
         </div>
@@ -49,7 +51,12 @@ export function Projects() {
               onClick={() => setActive(it.src)}
               className="group relative overflow-hidden rounded-2xl border border-border bg-white shadow-card aspect-[4/3]"
             >
-              <img src={it.src} alt={it.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img
+                src={it.src}
+                alt={it.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-0 left-0 right-0 p-4 text-left translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all">
                 <div className="text-xs text-white/80">{it.tag}</div>

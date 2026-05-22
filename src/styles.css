@@ -67,9 +67,8 @@
   --input: oklch(0.91 0 0);
   --ring: oklch(0.62 0.22 27);
 
-  --brand-blue-deep: oklch(0.38 0.22 264);   /* deep royal blue */
-  --gradient-brand: linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue) 55%, var(--brand) 55%, var(--brand) 100%);
-  --gradient-blue: linear-gradient(135deg, var(--brand-blue-deep), var(--brand-blue));
+  --gradient-brand: linear-gradient(135deg, oklch(0.62 0.22 27), oklch(0.55 0.24 264));
+  --gradient-blue: linear-gradient(135deg, oklch(0.55 0.24 264), oklch(0.62 0.22 27));
   --gradient-soft: linear-gradient(180deg, oklch(1 0 0), oklch(0.975 0 0));
   --shadow-elegant: 0 10px 40px -12px color-mix(in oklab, var(--ink) 18%, transparent);
   --shadow-card: 0 1px 2px rgba(10,10,10,0.04), 0 8px 24px -8px rgba(10,10,10,0.08);
@@ -94,36 +93,29 @@
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .container-x { @apply mx-auto w-full max-w-7xl px-6 lg:px-10; }
+  
   .bg-grid {
     background-image:
       linear-gradient(to right, rgba(10,10,10,0.04) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(10,10,10,0.04) 1px, transparent 1px);
     background-size: 48px 48px;
   }
-  .gradient-brand { background-image: var(--gradient-brand); }
-  .gradient-blue { background-image: var(--gradient-blue); }
-  .text-brand-blue { color: var(--brand-blue); }
-  .bg-brand-blue { background-color: var(--brand-blue); }
-  .bg-brand-blue-deep { background-color: var(--brand-blue-deep); }
-  .section-brand {
-    position: relative;
-    overflow: hidden;
-    background-color: var(--brand-blue-deep);
-    color: white;
+
+  /* Sharp diagonal split: Left half is blue, right half is red */
+  .gradient-brand { 
+    background-image: linear-gradient(135deg, #2a1fb4 50%, #d00000 50%); 
   }
-  .section-brand::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--brand);
-    clip-path: polygon(70% 0, 100% 0, 100% 100%, 40% 100%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .section-brand > * { position: relative; z-index: 1; }
+
+  /* Solid branding color utility fallbacks */
+  .text-brand-blue { color: #2a1fb4; }
+  .bg-brand-blue { background-color: #2a1fb4; }
+  .text-brand-red { color: #d00000; }
+  .bg-brand-red { background-color: #d00000; }
+
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-card { box-shadow: var(--shadow-card); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
+  
   .glass {
     background: color-mix(in oklab, white 75%, transparent);
     backdrop-filter: saturate(180%) blur(14px);

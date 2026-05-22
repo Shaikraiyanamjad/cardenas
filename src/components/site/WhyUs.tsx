@@ -17,7 +17,9 @@ export function WhyUs() {
     <section className="py-24 lg:py-32">
       <div className="container-x">
         <div className="max-w-2xl">
-          <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">Why Cardenas</div>
+          <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+            Why Cardenas
+          </div>
           <h2 className="mt-3 text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             Built on trust. Delivered with precision.
           </h2>

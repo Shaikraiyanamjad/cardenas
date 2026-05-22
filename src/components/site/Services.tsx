@@ -9,27 +9,60 @@ import sidewalk from "@/assets/svc-sidewalk.jpg";
 import remodel from "@/assets/svc-remodel.jpg";
 
 const services = [
-  { title: "Wood Flooring", desc: "Hardwood, laminate and engineered floors installed to last.", img: wood },
-  { title: "Carpet Services", desc: "Plush, durable carpet installation for any room or office.", img: carpet },
-  { title: "New Construction", desc: "Full-scope new builds with strong, code-compliant structures.", img: construction },
-  { title: "Remodeling", desc: "Kitchens, bathrooms, basements — transformed beautifully.", img: remodel },
-  { title: "Painting", desc: "Interior & exterior painting with flawless finish quality.", img: paint },
-  { title: "Power Washing", desc: "Restore siding, decks, and driveways to a like-new look.", img: power },
-  { title: "Sidewalks & Decks", desc: "Concrete sidewalks, walkways and outdoor decks built right.", img: sidewalk },
+  {
+    title: "Wood Flooring",
+    desc: "Hardwood, laminate and engineered floors installed to last.",
+    img: wood,
+  },
+  {
+    title: "Carpet Services",
+    desc: "Plush, durable carpet installation for any room or office.",
+    img: carpet,
+  },
+  {
+    title: "New Construction",
+    desc: "Full-scope new builds with strong, code-compliant structures.",
+    img: construction,
+  },
+  {
+    title: "Remodeling",
+    desc: "Kitchens, bathrooms, basements — transformed beautifully.",
+    img: remodel,
+  },
+  {
+    title: "Painting",
+    desc: "Interior & exterior painting with flawless finish quality.",
+    img: paint,
+  },
+  {
+    title: "Power Washing",
+    desc: "Restore siding, decks, and driveways to a like-new look.",
+    img: power,
+  },
+  {
+    title: "Sidewalks & Decks",
+    desc: "Concrete sidewalks, walkways and outdoor decks built right.",
+    img: sidewalk,
+  },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="section-brand py-24 lg:py-32">
+    <section id="services" className="py-24 lg:py-32 gradient-brand">
       <div className="container-x">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>
-            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[#ff6b6b]">What We Do</div>
-            <h2 className="mt-3 text-4xl lg:text-5xl font-bold tracking-tight max-w-2xl text-balance text-white">
+            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+              What We Do
+            </div>
+            <h2 className="mt-3 text-4xl lg:text-5xl font-bold tracking-tight max-w-2xl text-white">
               Premium services for residential & commercial projects
             </h2>
           </div>
-          <a href="#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/80">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white"
+          >
             Request a quote <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
@@ -57,7 +90,10 @@ export function Services() {
                 <h3 className="text-xl font-semibold tracking-tight">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                 <div className="mt-5 flex items-center justify-between">
-                  <a href="#contact" className="text-sm font-semibold text-primary inline-flex items-center gap-1">
+                  <a
+                    href="#contact"
+                    className="text-sm font-semibold text-primary inline-flex items-center gap-1"
+                  >
                     Learn more <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
                   <span className="text-xs font-mono text-muted-foreground">0{i + 1}</span>
